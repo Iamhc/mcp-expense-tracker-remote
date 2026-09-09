@@ -19,7 +19,7 @@ def get_collection():
 
 @mcp.tool
 def add(expense: int, spent_on: str, date: str, time: str = "") -> str:
-    """Add a new expense record to MongoDB Atlas."""
+    """Add a new expense record to MongoDB."""
     expenses = get_collection()
     expenditure = {"expense": expense, "spent_on": spent_on, "date": date, "time": time}
     result = expenses.insert_one(expenditure)
